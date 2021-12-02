@@ -1,0 +1,29 @@
+#scrollPane{
+    -fx-faint-focus-color:transparent;
+    -fx-focus-color:transparent;
+}
+
+.preview{
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+    -fx-border-insets: 5;
+}
+
+#colorPicker{
+    -fx-color-label-visible:false;
+    -fx-color-rect-width:30;
+    -fx-color-rect-height:30;
+    -fx-min-width:35;
+    -fx-min-height:35;
+    -fx-pref-width:35;
+    -fx-pref-height:35;
+    -fx-border-width:2;
+    -fx-border-color:black;
+}
+
+#colorPicker > .label{
+    -fx-background-color:black;
+    -fx-border-color:black;
+    -fx-padding:-1;
+}

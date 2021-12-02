@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="648.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt.MainController">
+   <left>
+      <VBox alignment="TOP_CENTER" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="moveIcon" cacheHint="QUALITY" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../../Icons/move.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
+            <ImageView fx:id="cropIcon" cacheHint="QUALITY" fitHeight="30.0" fitWidth="30.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Icons/crop.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView cacheHint="QUALITY" fitHeight="32.0" fitWidth="32.0" layoutX="15.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Icons/brush.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView cacheHint="QUALITY" fitHeight="30.0" fitWidth="30.0" layoutX="15.0" layoutY="100.0" onMouseClicked="#addSepiaEffect" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Icons/highlighter.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView cacheHint="QUALITY" fitHeight="32.0" fitWidth="32.0" layoutX="15.0" layoutY="140.0" onMouseClicked="#blur" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Icons/blur.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
+            <ImageView cacheHint="QUALITY" fitHeight="32.0" fitWidth="32.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Icons/sticker.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView cacheHint="QUALITY" fitHeight="30.0" fitWidth="30.0" layoutX="15.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Icons/zoom.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="undo" cacheHint="QUALITY" fitHeight="27.0" fitWidth="27.0" layoutX="15.0" layoutY="100.0" onMouseClicked="#clearEffects" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Icons/undo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Separator prefWidth="40.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Separator>
+            <ColorPicker id="colorPicker" styleClass="button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ColorPicker>
+         </children></VBox>
+   </left>
+   <center>
+      <StackPane fx:id="imagePane" minWidth="200.0" prefHeight="648.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <ImageView fx:id="imageFrame" blendMode="SRC_ATOP" cache="true" cacheHint="SPEED" fitHeight="281.0" fitWidth="431.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></ImageView>
+            <Separator orientation="VERTICAL" prefHeight="200.0" StackPane.alignment="CENTER_LEFT">
+               <StackPane.margin>
+                  <Insets left="-2.0" />
+               </StackPane.margin>
+            </Separator>
+            <Separator orientation="VERTICAL" prefHeight="200.0" StackPane.alignment="CENTER_RIGHT">
+               <StackPane.margin>
+                  <Insets right="-5.0" />
+               </StackPane.margin>
+            </Separator>
+         </children></StackPane>
+   </center>
+   <right>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets top="-1.0" />
+         </BorderPane.margin>
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#loadImages" text="Load images">
+               <VBox.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="-3.0" />
+               </VBox.margin>
+            </Separator>
+            <ScrollPane id="scrollPane" fx:id="imagesListScroll" hbarPolicy="NEVER" maxWidth="200.0" minWidth="200.0" prefHeight="648.0" prefWidth="194.0" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="imagesPreview" alignment="CENTER" prefHeight="45.0" prefWidth="180.0">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding></VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#loadImages" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveImage" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveImage" text="Save all" />
+                  <MenuItem fx:id="menuExit" mnemonicParsing="false" onAction="#exit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Scale" />
+                  <MenuItem mnemonicParsing="false" onAction="#pickBoxBlur" text="Blur" />
+                  <MenuItem mnemonicParsing="false" onAction="#changeBrightness" text="Brightness" />
+                  <MenuItem mnemonicParsing="false" onAction="#convertToGrayscale" text="Black &amp; White" />
+                  <MenuItem mnemonicParsing="false" text="Pixelate" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#showDocumentation" text="Documentation" />
+                  <MenuItem mnemonicParsing="false" onAction="#showHelp" text="Help" />
+                  <MenuItem mnemonicParsing="false" onAction="#showAbout" text="About" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

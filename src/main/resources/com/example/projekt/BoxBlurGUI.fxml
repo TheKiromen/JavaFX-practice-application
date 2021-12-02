@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="250.0" maxWidth="370.0" minHeight="250.0" minWidth="370.0" prefHeight="250.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt.BlurAlertController">
+   <children>
+      <Label text="Box Blur">
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label text="Width" />
+      <Slider fx:id="blurWidth" blockIncrement="1.0" majorTickUnit="5.0" max="20.0" minorTickCount="5" showTickLabels="true" snapToTicks="true" value="10.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" />
+         </VBox.margin>
+      </Slider>
+      <Label text="Height" />
+      <Slider fx:id="blurHeight" blockIncrement="1.0" majorTickUnit="5.0" max="20.0" minorTickCount="10" showTickLabels="true" snapToTicks="true" value="10.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" />
+         </VBox.margin>
+      </Slider>
+      <Button fx:id="confirm" mnemonicParsing="false" onAction="#confirm" text="Accept">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
