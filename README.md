@@ -1,7 +1,7 @@
 
 # JavaFX practice application
 
-**Not meant to be functional, this was create to practice design in JavaFX.**
+**Not meant to be functional, this was created for practicing design in JavaFX**
 
  JavaFX application for editing multiple images at once. It loads selected images and displays their previews. 
  Contains color picker, multiple windows for choosing filter parameters and saving/loading files.
